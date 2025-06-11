@@ -1,0 +1,126 @@
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-nav{
+  background-color: #4c4e52;
+  padding: 1rem;
+}
+
+.dashboard-navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  flex-wrap: wrap;
+}
+
+.dashboard-navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-wrap: wrap; /* Allow navbar items to wrap to next line */
+}
+
+.dashboard-navbar a {
+  text-decoration: none;
+  color: #37393c;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  transition: background 0.2s;
+}
+
+.dashboard-navbar a:hover {
+  background: #e3eafc;
+  border-radius: 4px;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding-top: 1rem;
+  background-color: #4c4e52;
+  margin-top: 2rem;
+}
+
+@media (max-width: 580px) {
+  .dashboard-content {
+    margin-top: 6rem;
+  }
+}
+
+.dashboard-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.dashboard-content p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.dashboard-footer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #4c4e52;
+  margin-top: 4rem; /* Adjust for fixed header */
+  height: 10vh;
+  color: white
+}
+
+hr {
+  border: none;
+  border-top: 2px solid #4c4e52;
+  margin: 0;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+    width: 50%;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    border: 1px solid #4c4e52;
+    text-align: center; /* Center text inside cards */
+}
+
+.card h1, .card h2, .card p {
+  text-align: center;
+}
+
+h1 {
+  /* Remove flex properties */
+  font-size: 2rem;
+  text-align: center;
+  word-break: break-word; /* Ensures long words wrap */
+  white-space: normal;    /* Allows wrapping */
+  width: 100%;            /* Take full width of container */
+  margin: 0 auto 1rem auto;
+}
+
+@media (max-width: 800px) {
+  .card {
+    width: 90%; /* Make cards take more width on small screens */
+    margin: 1rem auto;
+  }
+  .dashboard-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
